@@ -856,18 +856,18 @@ Second paragraph
            (org-gcal--convert-time-to-local-timezone "2021-03-03T11:30:00-08:00" "Europe/London")
            "2021-03-03T19:30:00+0000"))
   ;; FIXME: Passed in local with Emacs 26.3 and 27.1, Failed in GitHub CI
-  ;; (should (equal
-  ;;          (org-gcal--convert-time-to-local-timezone "2021-03-03T11:30:00-08:00" "Europe/Oslo")
-  ;;          "2021-03-03T20:30:00+0100"))
-  ;; (should (equal
-  ;;          (org-gcal--convert-time-to-local-timezone "2021-03-03T11:30:00-08:00" "America/New_York")
-  ;;          "2021-03-03T14:30:00-0500"))
-  ;; (should (equal
-  ;;          (org-gcal--convert-time-to-local-timezone "2021-03-03T11:30:00-08:00" "America/Los_Angeles")
-  ;;          "2021-03-03T11:30:00-0800"))
-  ;; (should (equal
-  ;;          (org-gcal--convert-time-to-local-timezone "2021-03-03T11:30:00-08:00" "Asia/Shanghai")
-  ;;          "2021-03-04T03:30:00+0800"))
+  (should (equal
+           (org-gcal--convert-time-to-local-timezone "2021-03-03T11:30:00-08:00" "Europe/Oslo")
+           "2021-03-03T20:30:00+0100"))
+  (should (equal
+           (org-gcal--convert-time-to-local-timezone "2021-03-03T11:30:00-08:00" "America/New_York")
+           "2021-03-03T14:30:00-0500"))
+  (should (equal
+           (org-gcal--convert-time-to-local-timezone "2021-03-03T11:30:00-08:00" "America/Los_Angeles")
+           "2021-03-03T11:30:00-0800"))
+  (should (equal
+           (org-gcal--convert-time-to-local-timezone "2021-03-03T11:30:00-08:00" "Asia/Shanghai")
+           "2021-03-04T03:30:00+0800"))
   )
 
 
